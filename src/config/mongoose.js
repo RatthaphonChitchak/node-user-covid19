@@ -1,7 +1,7 @@
 'use strict'
 
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGO_DB_URI || process.env.MONGODB_URI || "mongodb+srv://covid19_01:PP2537wkd@covid19.ivklh.mongodb.net/coivid19?retryWrites=true&w=majority"
+const MONGODB_URI = "mongodb+srv://covid19_01:PP2537wkd@covid19.ivklh.mongodb.net/coivid19?retryWrites=true&w=majority"
 module.exports = function () {
     mongoose.set('debug', process.env.MONGO_DB_URI || process.env.MONGODB_URI ? false : true);
     let db = mongoose.connect(MONGODB_URI, function (err) {
