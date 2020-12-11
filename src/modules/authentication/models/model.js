@@ -13,7 +13,6 @@ var validateLocalStrategyEmail = function (email) {
     return ((this.provider !== 'local' && !this.updated) || validator.isEmail(email));
 };
 
-
 var ModelSchema = new Schema({
     firstName: {
         type: String,
@@ -38,6 +37,12 @@ var ModelSchema = new Schema({
         trim: true,
         default: '',
         validate: [validateLocalStrategyEmail, 'Please fill a valid email address']
+    },
+    tel: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Please fill in your tel'
     },
     username: {
         type: String,

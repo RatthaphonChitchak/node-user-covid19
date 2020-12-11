@@ -10,14 +10,14 @@ module.exports = function (app) {
     // app.route(url).all(core.jwtCheck, policy.isAllowed)
     //     .get(controller.getList)
     //     .post(controller.create);
-
-    // app.route(urlWithParam).all(core.jwtCheck, policy.isAllowed)
-    //     .get(controller.read)
-    //     .put(controller.update)
-    //     .delete(controller.delete);
+    app.route(urlWithParam).all(core.jwtCheck, policy.isAllowed)
+        .get(controller.read)
+        .put(controller.update)
+        .delete(controller.delete);
 
     app.route('/api/getuser').all(core.jwtCheck, policy.isAllowed)
-        .get(controller.getUser);
+        .get(controller.getUser)
+
 
     app.route('/api/auth/signup').post(controller.signup, controller.token);
     app.route('/api/auth/signin').post(controller.signin, controller.token);
