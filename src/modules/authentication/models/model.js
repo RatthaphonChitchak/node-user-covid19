@@ -61,7 +61,7 @@ var ModelSchema = new Schema({
     },
     profileImageURL: {
         type: String,
-        default: ''
+        default: 'https://png.pngtree.com/element_our/20190601/ourlarge/pngtree-user-free-button-png-image-image_1338291.jpg'
     },
     provider: {
         type: String,
