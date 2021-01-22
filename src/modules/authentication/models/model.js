@@ -18,13 +18,13 @@ var ModelSchema = new Schema({
         type: String,
         trim: true,
         default: '',
-        required: 'กรุณากรอกชื่อ'
+        required: 'Please fill in your Name'
     },
     lastName: {
         type: String,
         trim: true,
         default: '',
-        required: 'กรุณากรอกนามสกุล'
+        required: 'Please fill in your lastNmme'
     },
     displayName: {
         type: String,
